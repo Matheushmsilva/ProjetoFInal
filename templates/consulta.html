@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1> Formulario de Saude</h1>
+<p> Qual o seu nome? {{ form.nome.value}}</p>
+<p> Seu cpf é: {{form.cpf.value}}</p>
+<p> Data de nascimento: {{form.data_nascimento.value}}</p>
+<p> Seu tipo sanguineo: {{form.tipo_sanguineo.value}}</p>
+<p> Seus adicionais: {{ form.adicionais.value }}</p>
+<p> Seu e-mail: {{form.email.value }}</p>
+
+{% endblock %} 
