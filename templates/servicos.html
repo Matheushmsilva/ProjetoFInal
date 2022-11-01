@@ -1,130 +1,141 @@
 {% extends "base.html" %}
 {% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTMED</title>
+
+    <link rel="stylesheet" href="{% static 'C:\Users\Grazielly\OneDrive\Documentos\projeto\ProjetoFinal\static\css\style.css' %}">
+</head>
 
 <body>
     <div class="pagina-inicial">
         <header class="cabecalho">
-         
-                 
+            <img src="{%  static 'C:\Users\Grazielly\OneDrive\Documentos\projeto\ProjetoFinal\static\img\cardiologia.jpg' %}" alt="" />
+            <div class="cabecalho__busca">
+                <div class="busca__fundo">
+                  
+                    <img class="busca__icone" src="{% static  'image.png' %}" alt="">
                 </div>
             </div>
         </header>
         <main class="principal">
             <section class="menu-lateral">
                 <nav class="menu-lateral__navegacao">
-                  
+                    <a href="#"><img src="{% static '/assets/ícones/1x/Home - ativo.png' %}"> Home </a>
+                    <a href="#"><img src="{% static '/assets/ícones/1x/Mais vistas - inativo.png' %}"> Agendar </a>
+                    <a href="#"><img src="{% static '/assets/ícones/1x/Novas - inativo.png' %}"> Serviços </a>
+                    <a href="#"><img src="{% static '/assets/ícones/1x/Surpreenda-me - inativo.png' %}"> Resultados </a>
+                    <a href="#"><img src="{% static '/assets/ícones/1x/Home - ativo.png' %}"> Mais </a>
                 </nav>
             </section>
             <section class="conteudo">
-                <section class="banner">
-                  
-                    <h1 class="banner__titulo"> INFOMED</h1>
+                    <h1 class="banner__titulo"> INTMED</h1>
                 </section>
                 <section class="tags">
-                    
+               
                     <ul class="tags__lista">
-                        <li class="tags__tag">Home</li>
-                        <li class="tags__tag">Agendar</li>
-                        <li class="tags__tag">Serviços</li>
-                        <li class="tags__tag">Resultados</li>
-                        <li class="tags__tag">Mais</li>
+                        <li class="tags__tag">Exames </li>
+                        <li class="tags__tag">Consultas</li>
+                        <li class="tags__tag">Nossos Médicos</li>
+                    
                     </ul>
                 </section>
                 <section class="galeria">
                     <div class="cards">
-                        <h2 class="cards__titulo">Conhceça nossos serviços</h2>
+                        <h2 class="cards__titulo">Nossos Serviços</h2>
                         <ul class="cards__lista">
                             <li class="card">
-                              
-                                   
+                                <a href="{% url 'servicos' %}">
+                                    <img class="card__imagem" src="{% static 'C:\Users\Grazielly\OneDrive\Documentos\projeto\ProjetoFinal\static\img\cardiologia.jpg' %}" alt="foto">
                                 </a>
-                                <span class="card__tag">Consultas</span>
+                                <span class="card__tag">Cardiologia</span>
                                 <div class="card__info">
-                                    <p class="card__titulo">Cardiologia</p>
-                                    <img src="../static/img/cardiologia.jpg" alt="Imagem cardiologia">
+                                    <p class="card__titulo"></p>
                                     <div class="card__texto">
                                         <p class="card__descricao">Imagem ilustrativa</p>
                                         <span>
-                                          
+                                            <img src="{% static '/assets/ícones/1x/favorite_outline.png' %}" alt="">
                                         </span>
                                     </div>
                                 </div>
                             </li>
                             <li class="card">
-                              
-                                  
+                                <a href="{% url 'servicos' %}">
+                                    <img class="card__imagem" src="{% static 'C:\Users\Grazielly\OneDrive\Documentos\projeto\ProjetoFinal\static\img\dermatologia.jpg' %}" alt="foto">
                                 </a>
-                                <span class="card__tag">Consultas</span>
+                                <span class="card__tag">Dermatologia</span>
                                 <div class="card__info">
-                                    <p class="card__titulo">Dermatologia</p>
-                                    <img src="../static/img/dermatologia.jpg" alt="imagem dermatologia">
+                                    <p class="card__titulo"></p>
                                     <div class="card__texto">
-                                        <p class="card__descricao">Imagem ilustrativa</p>
+                                        <p class="card__descricao"> Imagem ilustrativa</p>
                                         <span>
-                                        
+                                            <img src="{% static '/assets/ícones/1x/favorite_outline.png' %}" alt="">
                                         </span>
                                     </div>
                                 </div>
                             </li>
                             <li class="card">
-                            
-                              
+                                <a href="{% url 'servicos' %}">
+                                    <img class="card__imagem" src="{% static 'C:\Users\Grazielly\OneDrive\Documentos\projeto\ProjetoFinal\static\img\fisioterapia.jpg' %}" alt="foto">
                                 </a>
-                                <span class="card__tag">Consultas</span>
+                                <span class="card__tag">Fisioterapia</span>
                                 <div class="card__info">
-                                    <p class="card__titulo">Fisioterapia</p>
-                                    <img src="../static/img/fisioterapia.jpg" alt="imagem fisioterapia">
+                                    <p class="card__titulo"></p>
                                     <div class="card__texto">
-                                        <p class="card__descricao">Imagem ilustrativa</p>
+                                        <p class="card__descricao">Imagem ilustrativa </p>
                                         <span>
-                                            
+                                            <img src="{% static '/assets/ícones/1x/favorite_outline.png' %}" alt="">
                                         </span>
                                     </div>
                                 </div>
                             </li>
                             <li class="card">
-                              
-                                 
+                                <a href="{% url 'servicos' %}">
+                                    <img class="card__imagem" src="{% static 'C:\Users\Grazielly\OneDrive\Documentos\projeto\ProjetoFinal\static\img\ginecologia.jpeg' %}" alt="foto">
                                 </a>
-                                <span class="card__tag">Consultas</span>
+                                <span class="card__tag">Ginecologia </span>
                                 <div class="card__info">
-                                    <p class="card__titulo">Ginecologia</p>
-                                    <img src="../static/img/ginecologia.jpeg" alt="imagem ginecologia">
+                                    <p class="card__titulo">Nome da foto</p>
                                     <div class="card__texto">
-                                        <p class="card__descricao">Imagem ilustrativa</p>
+                                        <p class="card__descricao"> Imagem ilustrativa </p>
                                         <span>
-                                      
+                                            <img src="{% static '/assets/ícones/1x/favorite_outline.png' %}" alt="">
                                         </span>
                                     </div>
                                 </div>
                             </li>
                             <li class="card">
-                            
-                    
+                                <a href="{% url 'servicos' %}">
+                                    <img class="card__imagem" src="{% static 'C:\Users\Grazielly\OneDrive\Documentos\projeto\ProjetoFinal\static\img\hematologia.jpg' %}" alt="foto">
                                 </a>
-                                <span class="card__tag">Consultas</span>
+                                <span class="card__tag">Hematologia</span>
                                 <div class="card__info">
-                                    <p class="card__titulo">Hematologia</p>
-                                    <img src="../static/img/hematologia.jpg" alt="imagem hematologia">
+                                    <p class="card__titulo"></p>
                                     <div class="card__texto">
-                                        <p class="card__descricao">Imagem ilustrativa</p>
+                                        <p class="card__descricao"> Imagem ilustrativa </p>
                                         <span>
-                                       
+                                            <img src="{% static '/assets/ícones/1x/favorite_outline.png' %}" alt="">
                                         </span>
                                     </div>
                                 </div>
                             </li>
                             <li class="card">
-
+                                <a href="{% url 'servicos' %}">
+                                    <img class="card__imagem" src="{% static 'C:\Users\Grazielly\OneDrive\Documentos\projeto\ProjetoFinal\static\img\laboratorios.jpeg' %}" alt="foto">
                                 </a>
-                                <span class="card__tag">Exames</span>
+                                <span class="card__tag">Laboratórios</span>
                                 <div class="card__info">
-                                    <p class="card__titulo">Laboratório</p>
-                                    <img src="../static/img/laboratorios.jpeg" alt="imagem laboratorios">
+                                    <p class="card__titulo"></p>
                                     <div class="card__texto">
-                                        <p class="card__descricao">Imagem ilustrativa</p>
+                                        <p class="card__descricao">Imagem ilustrativa </p>
                                         <span>
-                                     
+                                            <img src="{% static '/assets/ícones/1x/favorite_outline.png' %}" alt="">
                                         </span>
                                     </div>
                                 </div>
@@ -137,25 +148,20 @@
     </div>
     <footer class="rodape">
         <div class="rodape__icones">
-           
-                
-            </a>
-
-            </a>
+    
+          
         </div>
-        <section class="tags">
-                    
-            <ul class="tags__lista">
-                <li class="tags__tag">Home</li>
-                <li class="tags__tag">Agendar</li>
-                <li class="tags__tag">Serviços</li>
-                <li class="tags__tag">Resultados</li>
-                <li class="tags__tag">Endereços</li>
-                <li class="tags__tag">Quem somos</li>
-                <li class="tags__tag">Contatos</li>
-            </ul>
-        </section>
-        
+        <a href="#"><img src="{% static '/assets/ícones/1x/Home - ativo.png' %}"> Home</a>
+        <a href="#"><img src="{% static '/assets/ícones/1x/Home - ativo.png' %}"> Agendar </a>
+        <a href="#"><img src="{% static '/assets/ícones/1x/Home - ativo.png' %}"> Serviços </a>
+        <a href="#"><img src="{% static '/assets/ícones/1x/Home - ativo.png' %}"> Resultados</a>
+        <a href="#"><img src="{% static '/assets/ícones/1x/Home - ativo.png' %}"> Endereços </a>
+        <a href="#"><img src="{% static '/assets/ícones/1x/Home - ativo.png' %}"> Privacidade</a>
+        <a href="#"><img src="{% static '/assets/ícones/1x/Home - ativo.png' %}"> Quem somos </a>
+        <a href="#"><img src="{% static '/assets/ícones/1x/Home - ativo.png' %}"> Contatos </a>
+        <p class="rodape__texto"></p>
     </footer>
 </body>
+
+</html>
 {% endblock %} 
