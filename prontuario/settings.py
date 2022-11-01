@@ -1,4 +1,3 @@
-import os
 """
 Django settings for prontuario project.
 
@@ -12,7 +11,9 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path, os
+from dotenv import load_dotenv
 
+load_dotenv()
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -60,7 +61,7 @@ ROOT_URLCONF = 'prontuario.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR,  'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
