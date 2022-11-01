@@ -13,4 +13,4 @@ def revConsulta (request):
     if request.method == "POST":
         form= SaudeForms(request.POST)
         contexto={'form': form}
-        return render (request, 'consulta.html', contexto)
+        return render (request, 'servicos.html', contexto)
